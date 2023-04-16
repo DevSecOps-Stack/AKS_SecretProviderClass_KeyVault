@@ -20,12 +20,12 @@ spec:
           env:
            - name: POSTGRES_USER
              valueFrom:
-                secretkeyRef:
+                secretKeyRef:
                   name: akvsecrets
                   key: POSTGRES_USER
            - name: POSTGRES_PASSWORD
              valueFrom:
-                secretkeyRef:
+                secretKeyRef:
                   name: akvsecrets
                   key: POSTGRES_PASSWORD
           imagePullPolicy: IfNotPresent
