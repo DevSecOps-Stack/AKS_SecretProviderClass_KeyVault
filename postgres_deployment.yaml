@@ -18,10 +18,16 @@ spec:
         - name: postgres-container
           image: postgres:13-alpine
           env:
-           - name: POSTGRES_USER_FILE
-             value: /mnt/secrets-store/username
-           - name: POSTGRES_PASSWORD_FILE
-             value: /mnt/secrets-store/password
+           - name: postgresuser
+             valueFrom:
+              secretkeyRef:
+                name: postgresuser
+                key: postgresuser
+           - name: postgrespassword
+             valueFrom:
+              secretkeyRef:
+                name: postgrespassword
+                key: postgrespassword
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
