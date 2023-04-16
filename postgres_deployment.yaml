@@ -21,12 +21,12 @@ spec:
            - name: postgresuser
              valueFrom:
                 secretkeyRef:
-                  name: postgresuser
+                  name: akvsecrets
                   key: postgresuser
            - name: postgrespassword
              valueFrom:
                 secretkeyRef:
-                  name: postgrespassword
+                  name: akvsecrets
                   key: postgrespassword
           imagePullPolicy: IfNotPresent
           ports:
