@@ -28,6 +28,7 @@ spec:
                 secretkeyRef:
                   name: akvsecrets
                   key: postgrespassword
+                  
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
