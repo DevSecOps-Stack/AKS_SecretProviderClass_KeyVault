@@ -20,12 +20,12 @@ spec:
           env:
            - name: postgresuser
              valueFrom:
-                secretkeyRef:
+                secretKeyRef:
                   name: akvsecrets
                   key: postgresuser
            - name: postgrespassword
              valueFrom:
-                secretkeyRef:
+                secretKeyRef:
                   name: akvsecrets
                   key: postgrespassword
                   
