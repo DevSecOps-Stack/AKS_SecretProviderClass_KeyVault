@@ -20,14 +20,14 @@ spec:
           env:
            - name: postgresuser
              valueFrom:
-              secretkeyRef:
-                name: postgresuser
-                key: postgresuser
+                secretkeyRef:
+                  name: postgresuser
+                  key: postgresuser
            - name: postgrespassword
-             valueFrom:
-              secretkeyRef:
-                name: postgrespassword
-                key: postgrespassword
+              valueFrom:
+                secretkeyRef:
+                  name: postgrespassword
+                  key: postgrespassword
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
