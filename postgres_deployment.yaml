@@ -18,17 +18,16 @@ spec:
         - name: postgres-container
           image: postgres:13-alpine
           env:
-           - name: postgresuser
+           - name: POSTGRES_USER
              valueFrom:
-                secretKeyRef:
+                secretkeyRef:
                   name: akvsecrets
-                  key: postgresuser
-           - name: postgrespassword
+                  key: POSTGRES_USER
+           - name: POSTGRES_PASSWORD
              valueFrom:
-                secretKeyRef:
+                secretkeyRef:
                   name: akvsecrets
-                  key: postgrespassword
-                  
+                  key: POSTGRES_PASSWORD
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
